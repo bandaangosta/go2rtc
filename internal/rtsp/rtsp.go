@@ -173,8 +173,8 @@ func tcpHandler(conn *rtsp.Conn) {
 			if stream == nil {
 				return
 			}
-
-			log.Debug().Str("stream", name).Msg("[rtsp] new consumer")
+			
+			log.Debug().Str("stream", name).Str("remote_addr", conn.Connection.RemoteAddr).Msg("[rtsp] new consumer")
 
 			conn.SessionName = app.UserAgent
 
