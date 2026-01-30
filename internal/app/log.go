@@ -74,7 +74,7 @@ func initLogger() {
 			}
 
 			if timeFormat != "" {
-				console.TimeFormat = "15:04:05.000"
+				console.TimeFormat = "2006-01-02 15:04:05.000"
 			} else {
 				console.PartsOrder = []string{
 					zerolog.LevelFieldName,
