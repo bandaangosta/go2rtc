@@ -280,8 +280,8 @@ func tcpHandler(conn *rtsp.Conn) {
 		}
 
 		closer()
-
-		log.Debug().Str("stream", name).Msg("[rtsp] disconnect")
+		
+		log.Debug().Str("stream", name).Str("remote_addr", conn.Connection.RemoteAddr).Msg("[rtsp] disconnect")
 	}
 
 	_ = conn.Close()
